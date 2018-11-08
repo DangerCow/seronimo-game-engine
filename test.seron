@@ -1,0 +1,29 @@
+with engine
+
+func _start
+
+    win = Window("test", (500, 500), (25, 25, 25))
+    x = 250
+    y = 250
+
+end
+
+func _update
+    drawBg [win]
+
+    if [key_down("K_d") and x < 500] [1]
+       x += 0.1
+
+    if [key_down("K_a") and x > 0] [1]
+       x -= 0.1
+
+    if [key_down("K_s") and y < 500] [1]
+       y += 0.1
+
+    if [key_down("K_w") and y > 0] [1]
+       y -= 0.1
+
+    circle [win] [(100, 200, 255)] [(int(x), int(y))] [15]
+
+    update [win]
+end
