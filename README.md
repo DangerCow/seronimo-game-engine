@@ -1,3 +1,3 @@
 # seronimo-game-engine
 
-hi xddddd
+read me will be done soon
